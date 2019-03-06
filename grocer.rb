@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |hash|
     hash.each do |key, value|
       if cart.has_key?(value)
-        if key == :item
+        if cart[:item][:count] >= 
           if count_hash[value] == nil 
            count_hash[value] = 1
           else 

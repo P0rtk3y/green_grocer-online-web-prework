@@ -55,6 +55,8 @@ def checkout(cart=[], coupons=[])
     final_price += info_hash[:price] * info_hash[:count] 
   end 
   
-  final_price = final_price * 0.9 if final_price > 100 
+  if final_price > 100 
+     final_price = final_price * 0.9 
+  end 
   final_price 
 end

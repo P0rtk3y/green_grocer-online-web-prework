@@ -52,7 +52,7 @@ def checkout(cart=[], coupons=[])
   final_price = 0 
   
   final_cart.each do |key, info_hash|
-    final_price = info_hash[:price] * info_hash[:count] 
+    final_price += info_hash[:price] * info_hash[:count] 
   end 
   
   final_price = final_price * 0.9 if final_price > 100 
